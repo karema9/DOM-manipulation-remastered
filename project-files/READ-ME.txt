@@ -1,0 +1,4 @@
+Think of this as a course
+
+Better to create a markdown version for each and every file.
+Make the text and code more distinct from each other.

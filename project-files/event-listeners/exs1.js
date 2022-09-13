@@ -23,6 +23,32 @@ element.style.backgroundColor = 'blue';
 const item = document.querySelector('#two');
 item.textContent = "I have changed";
 
+const anotherItem = document.querySelector(".first");
+anotherItem.style.backgroundColor = 'red';
+anotherItem.style.borderRadius = ''
+
 /**
  * ADDING EVENT LISTENERS USING JAVASCRIPT
  */
+
+const eles = document.querySelectorAll('div');
+
+eles.forEach((el) => {
+    el.addEventListener('click', buttonClicker);
+    el.textContent = 'Clicked : 0';
+    el.val = 0;
+})
+
+/** removing an event listener */
+eles[0].removeEventListener('click', buttonClicker);
+
+function buttonClicker(e) {
+    const ele = e.target;
+    console.log(ele.val);
+    let val = Number(ele.val);
+    val++;
+    ele.val  = val;
+
+}
+
+
