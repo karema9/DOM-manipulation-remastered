@@ -1,0 +1,3 @@
+projects in this directory are not styled since the focus is more
+on javascript.
+Later, should style the projects
