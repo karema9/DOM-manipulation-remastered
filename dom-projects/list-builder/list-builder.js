@@ -1,27 +1,45 @@
-
+// select div element from the DOM tree
 const output = document.querySelector('.output');
 
 
+// create a function to create a DOM element
+function createElement (tag, parent, className){
+    const ele = document.createElement(tag);
+    parent.append(ele);
+    ele.classList.add(className);
+    return ele;
+}
+
 // Create an input element
-const myInput = createElement(output, 'input', 'main');
+const myInput = createElement('input', output, 'my-input');
 myInput.setAttribute('type', 'text');
 
 // Create a button element
-const myBtn = createElement(output, 'button', 'main');
-myBtn.setAttribute('type', 'btn');
-myBtn.textContent = 'Add New +';
+const myBtn = createElement('button', output, 'my-button');
+myBtn.textContent = "Add User ";
 
-// create a list container
-const container = createElement(output, 'ul', 'myList' );
+
+// create an unordered-list container
+const myList = createElement('ul', output, 'my-list');
+
+
+// add an event listener to the button that adds the userName
 /**
- * @param elementName the type fo the element to be created
- * @param parent the parent element, the created element is appended here
- * @param classAdd name of the target class to be added, a string
- */
+ *
+ * MASTER THIS SECTION
+ *
+myBtn.addEventListener('click', (e)=>{
+    console.log('click');
+    let userName = myInput.value;
+    if(userName.length > 3)
+        const li = addUser(userName);
+        myInput.value = ' ';
+})
 
-function createElement(elementType,  parent, classAdd){
-    const item = document.createElement(elementType);
-    item.append(parent);
-    item.classList.add(classAdd);
-    return item;
+function addUser(userName){
+    const li = createElement('li', myList, 'my-list');
+    li.textContent = userName;
+    return li;
 }
+
+*/
