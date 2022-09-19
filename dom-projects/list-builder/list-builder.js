@@ -1,9 +1,8 @@
 // select div element from the DOM tree
 const output = document.querySelector('.output');
 
-
 // create a function to create a DOM element
-function createElement (tag, parent, className){
+function createElement(tag, parent, className){
     const ele = document.createElement(tag);
     parent.append(ele);
     ele.classList.add(className);
@@ -12,12 +11,11 @@ function createElement (tag, parent, className){
 
 // Create an input element
 const myInput = createElement('input', output, 'my-input');
-myInput.setAttribute('type', 'text');
+myInput.setAttribute('text','text');
 
 // Create a button element
-const myBtn = createElement('button', output, 'my-button');
-myBtn.textContent = "Add User ";
-
+const myBtn  = createElement('button', output, 'ny-btn');
+myBtn.textContent = "Add User +";
 
 // create an unordered-list container
 const myList = createElement('ul', output, 'my-list');
